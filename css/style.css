@@ -16,7 +16,7 @@
       margin:0 auto; 
       color: gray;
       box-sizing: border-box;
-      font: 25pt/20pt cursive;
+      font: 25px/20px cursive;
     }
 
     p{
@@ -291,4 +291,24 @@ body {
 .box-18{
   grid-area: R;
 
+}
+
+.abs {
+  background: rgb(255, 255, 39);
+  position: absolute;
+  height: 50px;
+  width: 600px;
+  top: calc(50% - 25px);
+  left: calc(50% - 300px);
+  text-align: center;
+}
+
+.rel {
+  position: relative;
+}
+
+.fix {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 110px);
 }
