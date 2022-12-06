@@ -312,3 +312,73 @@ body {
   left: 0;
   top: calc(50% - 110px);
 }
+
+.gl {
+  font-size: 0;
+  text-align: center;
+}
+
+.li_1{
+  display: inline-block;
+  font-size: 20px;
+  background: khaki;
+  width: 150px;
+}
+
+ul li+li{
+  border-left: 4px solid yellow
+}
+
+ul li ul li{
+  border: none;
+}
+
+.silka{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+  padding: 10px 15px;
+}
+
+.li_1:hover{
+  background: yellow;
+}
+
+.abs{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.abs_2{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+ }
+
+.abs_3{
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  display: none;
+}
+
+.ro:hover ul{
+  display: block;
+}
+
+.ro_2:hover ul{
+  display: block;
+}
+
+.ro_3:hover li{
+visibility: visible;
+}
+
+.rod{
+  position: relative;
+}
