@@ -318,31 +318,32 @@ body {
   text-align: center;
 }
 
-.li_1{
+.gl li{
   display: inline-block;
   font-size: 20px;
-  background: khaki;
+  background: green;
+  padding: 10px 15px;
   width: 150px;
 }
 
-ul li+li{
-  border-left: 4px solid yellow
+.gl_1>li+li{
+  border-left: 3px solid greenyellow
 }
 
-ul li ul li{
+.gl li ul li{
   border: none;
 }
 
-.silka{
+.gl li a{
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   display: block;
-  padding: 10px 15px;
+  
 }
 
-.li_1:hover{
-  background: yellow;
+ul>li:hover{
+  background: greenyellow;
 }
 
 .abs_0{
@@ -381,4 +382,105 @@ visibility: visible;
 
 .rod{
   position: relative;
+}
+
+.soc_icon{
+  font-size: 0;
+  text-align: center;
+  padding: 60px 0;
+  }
+
+.soc_icon li{
+  display: inline-block;
+  font-size: 30px;
+}
+
+.soc_icon li a{
+  background: url('../img/css_sprites.png');
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 5px 5px;
+  background-position: 0 -100px;
+}
+
+.soc_icon li+li a{
+  background-position: -100px -50px;
+}
+
+.soc_icon li:hover a{
+  background-position: -50px -100px;
+}
+
+.soc_icon li+li:hover a{
+  background-position: -100px 0;
+}
+
+.gl li a{
+  display: block;
+  position: relative;
+  padding: 20px 10px 20px 60px;
+}
+
+.spisok:before{
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/css_sprites.png');
+  background-position: -50px -50px;
+}
+
+.gl li+li a:before{
+  content: "";
+  background-position: 0 -50px;
+}
+
+.gl .test_1:before{
+  content: "";
+  position: absolute;
+  right: 0;
+  left: auto;
+  background-position: -100px -100px;
+}
+
+.gl .test_1, .gl .test_2{
+  position: relative;
+  padding: 20px 60px 20px 10px;
+}
+
+.gl .test_2:before{
+  content: "";
+  position: absolute;
+  right: 0;
+  left: auto;
+  background-position: -150px -100px;
+}
+
+.gl .test_3{
+  position: relative;
+  padding: 20px 10px 20px 60px;
+}
+
+.gl .test_3:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -150px -50px;
+}
+
+.gl .test_2:hover:before{
+  background-position: -150px -50px;
+}
+
+.gl .test_1:hover:before{
+  background-position: -150px 0;
+}
+
+.gl .test_3:hover:before{
+  background-position: -150px -100px;
 }
