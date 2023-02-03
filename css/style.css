@@ -313,174 +313,202 @@ body {
   top: calc(50% - 110px);
 }
 
-.gl {
+
+
+.mainmenu{
   font-size: 0;
   text-align: center;
+  overflow: hidden;
 }
 
-.gl li{
+.mainmenu:hover{
+  overflow: visible;
+}
+
+.mainmenu li{
   display: inline-block;
-  font-size: 20px;
-  background: green;
-  padding: 10px 15px;
-  width: 150px;
-}
+  font-size: 30px;
+  background: skyblue;
+  position: relative;
+  width: 200px; 
+ }
 
-.gl_1>li+li{
-  border-left: 3px solid greenyellow
-}
-
-.gl li ul li{
-  border: none;
-}
-
-.gl li a{
+.mainmenu li a{
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   display: block;
   
-}
-
-ul>li:hover{
-  background: greenyellow;
-}
-
-.abs_0{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  visibility: hidden;
-  z-index: 5;
-}
-
-.abs_2{
-  position: absolute;
-  left: 100%;
-  top: 0;
-  display: none;
- }
-
-.abs_3{
-  position: absolute;
-  right: 100%;
-  bottom: 0;
-  display: none;
-}
-
-.ro:hover ul{
-  display: block;
-}
-
-.ro_2:hover ul{
-  display: block;
-}
-
-.ro_3:hover li{
-visibility: visible;
-}
-
-.rod{
-  position: relative;
-}
-
-.soc_icon{
-  font-size: 0;
-  text-align: center;
-  padding: 60px 0;
   }
 
-.soc_icon li{
-  display: inline-block;
-  font-size: 30px;
+ul li:hover{
+  background: forestgreen;
+ }
+
+.submenu{
+  position: absolute;
+  top: 100%;
+  left: 5000px;
+  overflow: hidden;
+  transition: left .5s ease-out;
+  
 }
 
+ul li:hover .submenu{
+  left: 0;
+  overflow: visible;
+  z-index: 15;
+}
+
+.menu_fl{
+  position: absolute;
+  top: -15px;
+  left: 100%;
+  opacity: 0; 
+  transition: opacity 3s ease;
+}
+
+.menu_gr{
+  position: absolute;
+  bottom: 0px;
+  right: 100%;
+  opacity: 0; 
+  transition: opacity 3s ease;
+}
+
+.submenu li:hover .menu_gr, .submenu li:hover .menu_fl{
+ opacity: 1; 
+ overflow: visible;
+}
+
+.mainmenu>li+li{
+  border-left: 4px solid royalblue;
+}
+
+ul li ul li:first-child{
+  margin: 15px 0 auto;
+}
+
+
+
+ .soc_icon{
+  font-size: 0;
+  text-align: right;
+ }
+
+ .soc_icon li{
+  display: inline-block;
+  font-size: 18px;
+ }
+
 .soc_icon li a{
-  background: url('../img/css_sprites.png');
+  background: url('../img/css_sprites.png') -100px -50px;
   width: 50px;
   height: 50px;
   display: block;
-  margin: 5px 5px;
-  background-position: 0 -100px;
 }
 
-.soc_icon li+li a{
-  background-position: -100px -50px;
+.soc_icon .insta a{
+  background-position: 0 -100px;
 }
 
 .soc_icon li:hover a{
   background-position: -50px -100px;
 }
 
-.soc_icon li+li:hover a{
+.soc_icon .insta:hover a{
   background-position: -100px 0;
 }
 
-.gl li a{
-  display: block;
+
+
+.home a, .gallery a{
   position: relative;
-  padding: 20px 10px 20px 60px;
+  padding: 15px 10px 5px 60px;
 }
 
-.spisok:before{
+.home a:before{
   content: "";
-  display: inline-block;
+  background: url('../img/css_sprites.png') -50px -50px;
   width: 50px;
   height: 50px;
   position: absolute;
   top: 0;
   left: 0;
-  background: url('../img/css_sprites.png');
-  background-position: -50px -50px;
 }
 
-.gl li+li a:before{
+.home:hover a:before{
+  background-position: 0 0;
+}
+
+.gallery a:before{
   content: "";
-  background-position: 0 -50px;
-}
-
-.gl .test_1:before{
-  content: "";
-  position: absolute;
-  right: 0;
-  left: auto;
-  background-position: -100px -100px;
-}
-
-.gl .test_1, .gl .test_2{
-  position: relative;
-  padding: 20px 60px 20px 10px;
-}
-
-.gl .test_2:before{
-  content: "";
-  position: absolute;
-  right: 0;
-  left: auto;
-  background-position: -150px -100px;
-}
-
-.gl .test_3{
-  position: relative;
-  padding: 20px 10px 20px 60px;
-}
-
-.gl .test_3:before{
-  content: "";
+  background: url('../img/css_sprites.png') 0 -50px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 0;
   left: 0;
-  background-position: -150px -50px;
 }
 
-.gl .test_2:hover:before{
-  background-position: -150px -50px;
+.gallery:hover a:before{
+  background-position: -50px 0;
 }
 
-.gl .test_1:hover:before{
+.blocks_1 .blocks_1_1{
+  position: relative;
+  padding: 15px 60px 5px 15px;
+}
+
+.blocks_1 .blocks_1_1:before{
+  content: "";
+  background: url('../img/css_sprites.png') -100px -100px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.blocks_1:hover .blocks_1_1:before{
   background-position: -150px 0;
 }
 
-.gl .test_3:hover:before{
+.menu_fl_1 .menu_fl_1_1{
+  position: relative;
+  padding: 15px 60px 5px 15px;
+}
+
+.menu_fl_1 .menu_fl_1_1:before{
+  content: "";
+  background: url('../img/css_sprites.png') -150px -100px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu_fl_1:hover .menu_fl_1_1:before{
+  background-position: -150px -50px;
+}
+
+
+.menu_gr_1 .menu_gr_1_1{
+  position: relative;
+  padding: 15px 10px 5px 60px;
+}
+
+.menu_gr_1 .menu_gr_1_1:before{
+  content: "";
+  background: url('../img/css_sprites.png') -150px -50px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu_gr_1:hover .menu_gr_1_1:before{
   background-position: -150px -100px;
 }
